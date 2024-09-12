@@ -4,44 +4,78 @@ using namespace std;
 
 Point3D::Point3D()
 {
-
+	x = y = z = 0;
 }
 
 Point3D::Point3D(int x, int y, int z)
 {
+	this->x = x;
+	this->y = y;
+	this->z = z;
 
 }
 
 void Point3D::Init(int x, int y, int z)
 {
+	this->x = x;
+	this->y = y;
+	this->z = z;
+}
+
+void Point3D::Show()
+{
+	cout << "\tx: " << x << "\ty: " << y << "\tz: " << z << endl;
 }
 
 Point3D Point3D::Sum(Point3D& b)
 {
-	return Point3D();
+	Point3D rez;
+	rez.x = x + b.x;
+	rez.y = y + b.y;
+	rez.z = z + b.z;
+	return rez;
 }
 
 Point3D Point3D::Mult(Point3D& b)
 {
-	return Point3D();
+	Point3D rez;
+	rez.x = x * b.x;
+	rez.y = y * b.y;
+	rez.z = z * b.z;
+	return rez;
 }
 
 Point3D Point3D::Div(Point3D& b)
 {
-	return Point3D();
+	Point3D rez;
+	rez.x = x - b.x;
+	rez.y = y - b.y;
+	rez.z = z - b.z;
+	return rez;;
 }
 
 Point3D& Point3D::Sum(int x, int y, int z)
 {
-	// TODO: insert return statement here
+	this->x += x;
+	this->y += y;
+	this->z += z;
+	return *this;
+
+
 }
 
 Point3D& Point3D::Mult(int x, int y, int z)
 {
-	// TODO: insert return statement here
+	this->x *= x;
+	this->y *= y;
+	this->z *= z;
+	return *this;
 }
 
 Point3D& Point3D::Div(int x, int y, int z)
 {
-	// TODO: insert return statement here
+	if (x != 0) this->x /= x;
+	if (y != 0) this->y /= y;
+	if (z != 0) this->z /= z;
+	return *this;
 }

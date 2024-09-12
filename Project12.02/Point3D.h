@@ -13,6 +13,7 @@ public:
 	Point3D();
 	Point3D(int x, int y, int z);
 	void Init(int x, int y, int z);
+	void Show();
 	Point3D Sum(Point3D& b);
 	Point3D Mult(Point3D& b);
 	Point3D Div(Point3D& b);
