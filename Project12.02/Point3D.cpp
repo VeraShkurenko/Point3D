@@ -2,18 +2,44 @@
 #include<iostream>
 using namespace std;
 
+unsigned int Point3D::count = 0U;
+
+Point3D Point3D::GetCount()
+{
+	return Point3D();
+}
+
 Point3D::Point3D()
 {
 	x = y = z = 0;
 }
 
-Point3D::Point3D(int x, int y, int z)
-{
-	this->x = x;
-	this->y = y;
-	this->z = z;
+//Point3D::Point3D(int x, int y, int z)
+//{
+//	this->x = x;
+//	this->y = y;
+//	this->z = z;
+//
+//}
 
+
+
+
+Point3D::Point3D(const int x, const int y, const int z) : x(x), y(y), z(z)
+{
+	++count;
 }
+
+Point3D::~Point3D()
+{
+	--count;
+}
+
+void Point3D::InfoAboutObjects()
+{
+	cout << "Live objects: " << count << endl;
+}
+
 
 void Point3D::Init(int x, int y, int z)
 {

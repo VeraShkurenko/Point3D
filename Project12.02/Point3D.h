@@ -10,8 +10,19 @@ class Point3D
 	int z;
 
 public:
+
+	static unsigned int count;
+
+	Point3D(const int x, const int y, const int z);
+	~Point3D();
+
+	static void InfoAboutObjects();
+
+
+	static Point3D GetCount();
+
 	Point3D();
-	Point3D(int x, int y, int z);
+	/*Point3D(int x, int y, int z);*/
 	void Init(int x, int y, int z);
 	void Show();
 	Point3D Sum(Point3D& b);
