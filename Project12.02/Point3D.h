@@ -19,7 +19,7 @@ public:
 	static void InfoAboutObjects();
 
 
-	static Point3D GetCount();
+	static unsigned int GetCount();
 
 	Point3D();
 	/*Point3D(int x, int y, int z);*/

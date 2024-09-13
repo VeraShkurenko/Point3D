@@ -31,6 +31,8 @@ int main()
 
 	cout << "Live objects: " << Point3D::count << endl;
 
+	Point3D p4(10, 2, 9); 
+	p4.Show();
 
-
+	cout << "Count: " << Point3D::GetCount() << endl;
 }

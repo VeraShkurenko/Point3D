@@ -2,11 +2,12 @@
 #include<iostream>
 using namespace std;
 
-unsigned int Point3D::count = 0U;
+unsigned int Point3D::count = 0;
 
-Point3D Point3D::GetCount()
+
+unsigned int Point3D::GetCount()
 {
-	return Point3D();
+	return count;
 }
 
 Point3D::Point3D()
@@ -39,6 +40,7 @@ void Point3D::InfoAboutObjects()
 {
 	cout << "Live objects: " << count << endl;
 }
+
 
 
 void Point3D::Init(int x, int y, int z)
